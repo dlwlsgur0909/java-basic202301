@@ -5,7 +5,7 @@ package org.example.basic;
 //import static java.lang.System.*;
 //import static org.example.basic.DanceLevel.*;
 
-public class Dancer {
+public abstract class Dancer {
 
     private final String crewName; // 팀의 이름
     private final String myName; // 내 이름
@@ -48,16 +48,7 @@ public class Dancer {
     }
 
     // 춤추기
-    public void dance() {
-        stretch();
-        makeFlexible();
-
-        if(!flexible) {
-            System.out.println("유연성 운동을 안해서 죽었습니다.");
-            return;
-        }
-        System.out.println(myName + "님이 춤을 춥니다.");
-    }
+    public abstract void dance();
 
 
     public String getCrewName() {

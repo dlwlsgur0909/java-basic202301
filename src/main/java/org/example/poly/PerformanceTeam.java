@@ -16,6 +16,14 @@ public class PerformanceTeam {
         System.out.println("현재 팀원 수 : " + dancers.size() + "명");
     }
 
+    // 군무연습
+    public void groupDance() {
+        for (Dancer dancer : dancers) {
+            dancer.dance();
+        }
+
+    }
+
 
 
 }

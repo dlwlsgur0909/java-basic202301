@@ -1,10 +1,12 @@
 package org.example.inherit;
 
 import org.example.basic.Dancer;
+import org.example.basic.Rapper;
+import org.example.basic.Singer;
 
 import javax.naming.directory.InitialDirContext;
 
-public class IdolDancer extends Dancer {
+public class IdolDancer extends Dancer implements Singer, Rapper {
 
     private int numberOfFan; // 팬의 수
 
@@ -22,7 +24,6 @@ public class IdolDancer extends Dancer {
     // 부모의 메서드 시그니처(이름, 리턴타입, 파라미터)를 똑같이 맞춰야함
     @Override
     public void dance() {
-        super.dance();
         wink();
     }
 
@@ -31,5 +32,14 @@ public class IdolDancer extends Dancer {
     }
 
 
+    @Override
+    public void sing() {
+        System.out.println("노래를 합니다~");
+    }
 
+
+    @Override
+    public void rap() {
+        System.out.println("랩을 합니다!");
+    }
 }
