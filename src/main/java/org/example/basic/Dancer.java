@@ -60,7 +60,11 @@ public class Dancer {
     }
 
 
+    public String getCrewName() {
+        return crewName;
+    }
 
-
-
+    public String getMyName() {
+        return myName;
+    }
 }
