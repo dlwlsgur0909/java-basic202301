@@ -57,6 +57,9 @@ public class Main {
 
 
         // Set Collection
+        // Set은 중복값을 자동으로 제거하지만 goods1과 goods2는 hash값이 다르므로 중복으로 보지 않는다
+        // Goods 클래스에서 equals와 hashCode를 오버라이딩 하여 필드 값이 같으면 같은 객체로 보고
+        // 같은 hash값을 가질 수 있도록 함
         Set<Goods> set1 = new HashSet<>();
         set1.add(goods1);
         set1.add(goods2);
